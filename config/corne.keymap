@@ -22,7 +22,7 @@
                           &kp ESC     &kp TAB         &kp SPACE       &kp RET &kp DELETE      &mo 3
                         >;
                 };
-
+/*
                 nav_layer {
                         bindings = <
 &none &none &none &none &none &none &none &none &none &none &none &none
@@ -40,7 +40,7 @@
                     &kp ESC     &kp TAB         &kp SPACE       &kp RET &kp DELETE      &mo 3
 
                   >;
-                };
+                };*/
         };
 };
 
