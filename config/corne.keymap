@@ -6,7 +6,6 @@
         keymap {
                 compatible = "zmk,keymap";
 
-   // &none &none &none &none &none &none &none &none &none &none &none &none
                 default_layer {
                         bindings = <
 &none &lt 2 Q       &kp W       &kp E       &lt 1 R         &lt 2 T         &kp Y   &kp U           &kp I       &kp O       &kp P           &none
@@ -41,7 +40,7 @@
                     &kp ESC     &kp TAB         &kp SPACE       &kp RET &kp DELETE      &mo 3
 
                   >;
-                }
+                };
         };
 };
 
