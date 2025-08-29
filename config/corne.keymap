@@ -33,9 +33,9 @@
 
                 nav_layer {
                         bindings = <
-&none &none &none &none &none &none &none &none &none &none &none &none
-&none &none   &none &none   &none   &none      &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp K_APP &none
-&none &none   &none &none   &none   &none      &kp HOME &kp PG_DN  &kp PG_UP  &kp END &kp PIPE &none
+&none &bt BT_CLR_ALL &bt BT_CLR &bt BT_NXT   &bt BT_PRV &none &none &none &none &none &none &none
+&none &bt BT_SEL 0  &bt BT_SEL 1 &bt BT_SEL 2   &bt BT_SEL 3  &none      &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp K_APP &none
+&none &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2  &bt BT_DISC 3  &none      &kp HOME &kp PG_DN  &kp PG_UP  &kp END &kp PIPE &none
                   &kp LGUI &none   &kp SPACE     &kp RET   &none    &kp RALT
                       &kp ESC     &kp TAB         &kp SPACE       &kp RET &kp DELETE      &mo 3
                         >;
