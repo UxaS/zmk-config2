@@ -6,11 +6,24 @@
 
 
 / {
+  behaviors {
+        td_play_pause_next_prev: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp C_PLAY_PAUSE>, <&kp C_NEXT>, <&kp C_PREV>;
+        };
+    };
   combos {
         compatible = "zmk,combos";
+        combo_return {
+            timeout-ms = <100>;
+            key-positions = <19 20>;
+            bindings = <&kp RET>;
+        };
         combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
+            timeout-ms = <100>;
+            key-positions = <15 16>;
             bindings = <&kp TAB>;
         };
     };
@@ -19,36 +32,36 @@
 
                 default_layer {
                         bindings = <
-&none &lt 1 Q       &lt 2 W     &lt 3 E     &mt GLOBE R     &kp T          &lt 1 Y    &lt 2 U       &lt 3 I      &mt GLOBE O &kp P           &none
-&none &mt LCTRL A   &mt LALT S  &mt LCMD D  &mt LSHIFT F    &kp G           &kp H     &mt RSHIFT J  &mt RCMD K   &mt RALT L  &mt RCTRL SEMI  &none
-&none &kp Z         &kp X       &kp C       &kp V           &kp B           &kp N     &kp M         &kp COMMA    &kp DOT     &kp FSLH        &none
-                                &kp ESC     &kp TAB         &kp SPACE       &kp SPACE &kp  RET      &kp BSPC
+&none &mt GLOBE Q   &lt 4 W     &lt 3 E     &lt 2 R        &lt 1 T         &lt 1 Y   &lt 2 U       &lt 3 I        &lt 4 O      &mt GLOBE P     &none
+&none &kp  A        &kp  S      &kp  D      &kp  F         &kp G           &kp H     &kp J         &kp K          &kp L        &kp SEMI        &none
+&none &mt LCTRL Z   &mt LALT X  &mt LCMD C  &kp V          &kp B           &kp N     &kp M         &mt RCMD COMMA &mt RALT DOT &mt RCTRL FSL   &none
+                                &kp ESC     &mt LSHIFT TAB &kp SPACE       &kp SPACE &mt RSHIFT RET &kp BSPC
                         >;
+                };
+                punctuation_layer {
+                  bindings = <
+&none &kp EXCL  &kp AT    &kp HASH &kp DOLLAR &kp PERCENT                   &kp CARET      &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR &none
+&none &kp EQUAL &kp MINUS &kp FSLH &kp BSLH   &kp SEMI                      &kp APOSTROPHE &kp COMMA     &kp DOT  &kp LBKT &kp RBKT &none
+&none &trans &trans &trans &trans &trans                                    &kp C_AC_SEARCH &trans &trans &trans &trans &none
+                           &trans &trans &trans                             &trans &trans &trans 
+                  >;
                 };
                 num_f_layer {
                         bindings = <
-&none &kp F11         &kp F12     &kp ESC       &none           &none       &kp EQUAL   &kp MINUS       &kp STAR    &kp FSLH    &kp DOT      &none
-&none &mt LCTRL F6    &mt LALT F7 &mt LCMD F8   &mt LSHIFT F9   &kp F10     &kp N6      &mt RSHIFT N7   &mt RCMD N8 &mt RALT N9 &mt RCTRL N0 &none
-&none &kp F1          &kp F2      &kp F3        &kp F4          &kp F5      &kp N1      &kp N2          &kp N3      &kp N4      &kp N5       &none
-                                &kp ESC     &kp TAB         &kp SPACE       &kp SPACE   &kp  RET        &kp DELETE
+&none &kp F11      &kp F12     &kp ESC     &INSERT       &none              &kp EQUAL   &kp MINUS     &kp STAR    &kp FSLH    &kp DOT      &none
+&none &kp F6       &kp F7      &kp F8      &kp F9        &kp F10            &kp N6      &kp N7        &kp N8      &kp N9      &kp N0       &none
+&none &mt LCTRL F1 &mt LALT F2 &mt LCMD F3 &mt LSHIFT F4 &kp F5             &kp N1      &mt RSHIFT N2 &mt RCMD N3 &mt RALT N4 &mt RCTRL N5 &none
+                                &kp ESC     &kp TAB      &kp SPACE          &kp SPACE   &kp  RET      &kp DELETE
                         >;
                 };
 
                 nav_layer {
                         bindings = <
-&none &bt BT_CLR_ALL &bt BT_CLR    &bt BT_NXT    &bt BT_PRV &none &out OUT_USB &out OUT_BLE &out OUT_TOG &none &none &none
-&none &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &none      &kp LEFT &kp DOWN &kp UP  &kp RIGHT &kp K_APP &none
-&none &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3  &none      &kp HOME &kp PG_DN  &kp PG_UP  &kp END &kp PIPE &none
-                  &kp ESC     &kp TAB         &kp SPACE       &kp SPACE   &kp  RET        &kp DELETE
+&none &bt BT_CLR_ALL &bt BT_CLR    &bt BT_NXT    &bt BT_PRV     &td_play_pause_next_prev       &out OUT_USB &out OUT_BLE &out OUT_TOG  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS &none
+&none &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &none                       &kp LEFT     &kp DOWN     &kp UP        &kp RIGHT &kp K_APP &none
+&none &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3  &none                       &kp HOME     &kp PG_DN    &kp PG_UP     &kp END &kp PIPE &none
+                                &kp ESC     &kp TAB         &kp SPACE                       &kp SPACE    &kp  RET     &kp DELETE
                         >;
-                };
-                punctuation_layer {
-                  bindings = <
-&none &kp EXCL &kp AT &kp HASH &kp DOLLAR &kp PERCENT &kp CARET &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR &none
-&none &mt LCTRL EQUAL &mt LALT MINUS &mt LCMD FSLH &mt LSHIFT BSLH &kp SEMI &kp APOSTROPHE &mt RSHIFT COMMA &mt RCMD DOT &mt RALT LBKT &mt RCTRL RBKT &none
-&none &kp GRAVE &none &none &none &none &none &none &none &none &none &none
-                   &kp ESC     &kp TAB         &kp SPACE       &kp SPACE   &kp  RET        &kp DELETE
-                  >;
                 };
         };
 };
