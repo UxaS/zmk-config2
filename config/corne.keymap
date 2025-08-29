@@ -34,7 +34,7 @@
                         bindings = <
 &none &mt GLOBE Q   &lt 4 W     &lt 3 E     &lt 2 R        &lt 1 T         &lt 1 Y   &lt 2 U       &lt 3 I        &lt 4 O      &mt GLOBE P     &none
 &none &kp  A        &kp  S      &kp  D      &kp  F         &kp G           &kp H     &kp J         &kp K          &kp L        &kp SEMI        &none
-&none &mt LCTRL Z   &mt LALT X  &mt LCMD C  &kp V          &kp B           &kp N     &kp M         &mt RCMD COMMA &mt RALT DOT &mt RCTRL FSL   &none
+&none &mt LCTRL Z   &mt LALT X  &mt LCMD C  &kp V          &kp B           &kp N     &kp M         &mt RCMD COMMA &mt RALT DOT &mt RCTRL FSLH   &none
                                 &kp ESC     &mt LSHIFT TAB &kp SPACE       &kp SPACE &mt RSHIFT RET &kp BSPC
                         >;
                 };
