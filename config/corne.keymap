@@ -4,10 +4,10 @@
 #include <dt-bindings/zmk/outputs.h>
 
 #define DEFAULT 0
-#define PUNCTUATION_LAYER  1
-#define NUM_LAYER 2
-#define NAV_LAYER 3
-#define MANAGE_LAYER 4
+// #define PUNCTUATION_LAYER  1
+// #define NUM_LAYER 2
+// #define NAV_LAYER 3
+// #define MANAGE_LAYER 4
 
 
 / {
@@ -37,18 +37,18 @@
 
                 default_layer {
                         bindings = <
-&none &mt GLOBE Q &lt MANAGE_LAYER W  &lt NAV_LAYER E &lt NUM_LAYER R &lt PUNCTUATION_LAYER T    &lt PUNCTUATION_LAYER Y   &lt NUM_LAYER U &lt NAV_LAYER I &lt MANAGE_LAYER O &mt GLOBE P      &none
-&none &kp  A      &kp  S              &kp  D          &kp  F          &kp G                      &kp H                     &kp J           &kp K           &kp L              &kp SEMI         &none
-&none &mt LCTRL Z &mt LALT X          &mt LCMD C      &kp V           &kp B                      &kp N                     &kp M           &mt RCMD COMMA  &mt RALT DOT       &mt RCTRL FSLH   &none
-                                                      &kp ESC         &mt LSHIFT TAB             &kp SPACE                 &kp SPACE       &mt RSHIFT RET  &kp BSPC
+&none &mt GLOBE Q &lt 4 W    &lt 3 E    &lt 2 R &lt 1 T    &lt 1 Y   &lt 2 U &lt 3 I         &lt 4 O       &mt GLOBE P      &none
+&none &kp  A      &kp  S     &kp  D     &kp  F  &kp G      &kp H     &kp J   &kp K           &kp L         &kp SEMI         &none
+&none &mt LCTRL Z &mt LALT X &mt LCMD C &kp V   &kp B      &kp N     &kp M   &mt RCMD COMMA  &mt RALT DOT  &mt RCTRL FSLH   &none
+                             &kp ESC    &mt LSHIFT TAB  &kp SPACE                 &kp SPACE       &mt RSHIFT RET  &kp BSPC
                         >;
                 };
                 punctuation_layer {
                   bindings = <
 &none &kp EXCL  &kp AT    &kp HASH &kp DOLLAR &kp PERCENT                   &kp CARET      &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR &none
 &none &kp EQUAL &kp MINUS &kp FSLH &kp BSLH   &kp SEMI                      &kp APOSTROPHE &kp COMMA     &kp DOT  &kp LBKT &kp RBKT &none
-&none &trans &trans &trans &trans &trans                                    &trans &trans &trans &trans &trans &none
-                           &trans &trans &trans                             &trans &trans &trans 
+&none &trans    &trans    &trans   &trans     &trans                        &trans         &trans        &trans   &trans   &trans   &none
+                           &trans  &trans     &trans                        &trans &trans &trans 
                   >;
                 };
                 num_f_layer {
