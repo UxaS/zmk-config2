@@ -89,8 +89,8 @@
                 manage_layer {
                         bindings = <
 &none &bt BT_CLR_ALL &bt BT_CLR    &bt BT_PRV    &bt BT_NXT     &td_play_pause_next_prev    &out OUT_USB &out OUT_BLE &out OUT_TOG  &kp C_AC_DESKTOP_SHOW_ALL_WINDOWS &kp C_AC_DESKTOP_SHOW_ALL_APPLICATIONS &none
-&none &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL 4   &kp C_AC_SEARCH             &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp C_PREVIOUS &kp C_NEXT &none
-&none &bt BT_DISC 1  &bt BT_DISC 2 &bt BT_DISC 3 &bt BT_DISC 4  &none                       &none   &none &none &none &none &none
+&none &bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_SEL  4               &kp C_MUTE &kp C_VOLUME_DOWN &kp C_VOLUME_UP &kp C_PREVIOUS &kp C_NEXT &kp C_AC_SEARCH
+&none &bt BT_DISC 0  &bt BT_DISC 1 &bt BT_DISC 2 &bt BT_DISC 3  &bt BT_DISC 4               &none   &none &none &none &none &none
                                 &trans &trans &trans                                        &trans &trans &trans
                         >;
                 };
