@@ -57,26 +57,26 @@
 
                 default_layer {
                         bindings = <
-&none &mt GLOBE Q &lt 4 W    &lt 3 E    &lt 2 R &lt 1 T    &lt 1 Y   &lt 2 U &lt 3 I     &lt 4 O     &mt GLOBE P      &none
-&none &mt LCTRL A &mt LALT S &mt LCMD D &kp  F  &kp G      &kp H     &kp J   &mt RCMD K  &mt RALT L  &mt RCTRL SEMI   &none
-&none &kp Z       &kp X      &kp C      &kp V   &kp B      &kp N     &kp M   &kp COMMA   &kp DOT     &kp FSLH         &none
-                             &kp ESC    &mt LSHIFT TAB  &kp SPACE                 &kp SPACE       &mt RSHIFT RET  &kp BSPC
+&none &mt GLOBE Q &lt 4 W    &lt 3 E    &lt 2 R &lt 1 T                    &lt 1 Y     &lt 2 U   &lt 3 I     &lt 4 O     &mt GLOBE P      &none
+&none &mt LCTRL A &mt LALT S &mt LCMD D &kp  F  &kp G                      &kp H       &kp J     &mt RCMD K  &mt RALT L  &mt RCTRL SEMI   &none
+&none &kp Z       &kp X      &kp C      &kp V   &kp B                      &kp N       &kp M     &kp COMMA   &kp DOT     &kp FSLH         &none
+             &kp ESC    &mt LSHIFT TAB     &kp SPACE                       &kp SPACE      &mt RSHIFT RET       &kp BSPC
                         >;
                 };
                 punctuation_layer1 {
                   bindings = <
-&none &kp EXCL  &kp AT    &kp HASH &kp DOLLAR &kp PERCENT                   &kp CARET      &kp AMPERSAND &kp STAR &kp LPAR &kp RPAR &none
-&none &kp EQUAL &kp MINUS &kp FSLH &kp BSLH   &kp SEMI                      &kp APOSTROPHE &kp COMMA     &kp DOT  &kp LBKT &kp RBKT &none
-&none &kp GRAVE    &trans    &trans   &trans     &trans                        &trans         &trans        &trans   &trans   &trans   &none
-                           &trans  &trans     &trans                        &trans &trans &kp DELETE 
+&none &kp N1      &kp N2         &kp N3       &kp N4       &kp N5          &kp N6         &kp N7   &kp N8    &kp N9   &kp N0   &none
+&none &kp MINUS   &kp EQUAL      &kp DOLLAR   &kp PERCENT  &kp CARET       &kp AMPERSAND  &kp LBKT &kp RBKT  &kp ASTERISK   &kp APOSTROPHE &none
+&none &kp GRAVE   &none          &none        &none        &none           &none          &none    &none     &PIPE    &kp BSLH &none
+                           &trans  &trans     &trans                       &trans &trans &kp DELETE 
                   >;
                 };
                 num_f_layer2 {
                         bindings = <
-&none &kp F11      &kp F12     &kp ESC     &kp INSERT       &none              &kp EQUAL   &kp MINUS     &kp STAR    &kp FSLH    &kp DOT      &none
-&none &kp F6       &kp F7      &kp F8      &kp F9        &kp F10            &kp N6      &kp N7        &kp N8      &kp N9      &kp N0       &none
-&none &mt LCTRL F1 &mt LALT F2 &mt LCMD F3 &mt LSHIFT F4 &kp F5             &kp N1      &mt RSHIFT N2 &mt RCMD N3 &mt RALT N4 &mt RCTRL N5 &none
-                                &trans &trans &trans                             &trans &trans &trans
+&none &kp F1   &kp F2     &kp F3   &kp F4   &kp F5                         &kp KP_N7   &kp KP_N8   &kp KP_N9  &none  &none  &none
+&none &kp F6   &kp F7     &kp F8   &kp F9   &kp F10                        &kp KP_N4   &kp KP_N5   &kp KP_N6  &none  &none  &none
+&none &kp F11  &kp F12    &none    &none    &none                          &kp KP_N1   &kp KP_N2   &kp KP_N3  &none  &none  &none
+                                &trans &trans &trans                       &kp KP_N0   &kp DOT     &kp RET
                         >;
                 };
 
@@ -84,7 +84,7 @@
                         bindings = <
 &none   &none &none &none &none &none                                       &mmv MOVE_LEFT &mmv MOVE_DOWN &mmv MOVE_UP &mmv MOVE_RIGHT &none &none
 &none   &msc SCRL_LEFT &msc SCRL_DOWN &msc SCRL_UP &msc SCRL_RIGHT &none    &kp LEFT     &kp DOWN     &kp UP        &kp RIGHT &kp K_APP &none
-&none   &none &none &none &none &none                                       &kp HOME     &kp PG_DN    &kp PG_UP     &kp END &kp PIPE &none
+&none   &none &none &none &none &none                                       &kp HOME     &kp PG_DN    &kp PG_UP     &kp END &kp INSERT &none
                                 &mkp LCLK &mkp MCLK &mkp RCLK               &mkp LCLK &mkp MCLK &mkp RCLK
                         >;
                 };
