@@ -13,7 +13,9 @@
     time-to-max-speed-ms = <300>;
     acceleration-exponent = <1>;
 };
-
+&mt {
+    tapping-term-ms = <300>;  // увеличить время одиночного нажатия до 300 мс
+};
 &msc {
     x-input-code = <INPUT_REL_HWHEEL>;
     y-input-code = <INPUT_REL_WHEEL>;
