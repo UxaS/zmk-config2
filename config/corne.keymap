@@ -65,7 +65,7 @@
 &none &mt GLOBE Q &lt 4 W    &lt 3 E    &lt 2 R &lt 1 T                    &lt 1 Y     &lt 2 U   &lt 3 I     &lt 4 O     &mt GLOBE P      &none
 &none &mt LCTRL A &mt LALT S &mt LCMD D &kp  F  &kp G                      &kp H       &kp J     &mt RCMD K  &mt RALT L  &mt RCTRL SEMI   &none
 &none &kp Z       &kp X      &kp C      &kp V   &kp B                      &kp N       &kp M     &kp COMMA   &kp DOT     &kp FSLH         &none
-             &kp ESC    &mt LSHIFT TAB     &kp SPACE                       &kp SPACE   &mt RSHIFT BSPC  &kp RSHIFT RET
+             &kp ESC    &kp TAB     &mt LSHIFT SPACE                       &mt RSHIFT SPACE   &kp BSPC  &kp RET
                         >;
                 };
                 punctuation_layer1 {
@@ -73,7 +73,7 @@
 &none &kp N1      &kp N2         &kp N3       &kp N4       &kp N5          &kp N6         &kp N7         &kp N8          &kp N9   &kp N0   &none
 &none &kp EXCL    &kp AT_SIGN    &kp HASH     &kp DOLLAR   &kp PERCENT     &kp CARET      &kp AMPERSAND  &kp ASTERISK    &kp LBKT &kp RBKT &none
 &none &kp GRAVE   &none          &none        &none        &none           &kp MINUS      &kp EQUAL      &kp APOSTROPHE  &kp PIPE &kp BSLH &none
-                           &trans  &trans     &trans                       &kp DELETE &kp BSPC &trans  
+                                &trans      &trans        &kp SPACE                        &kp SPACE      &kp DELETE     &trans  
                   >;
                 };
                 num_f_layer2 {
