@@ -31,6 +31,19 @@
 
 
 / {
+  macros {
+        // Макрос с явным порядком зажатия и отпускания
+        super_space_macro: super_space_macro {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings
+                = <&macro_press &kp LWIN>    // 1. Зажимаем Super (LWIN / LGUI)
+                , <&macro_tap &kp SPACE>       // 2. Нажимаем и отпускаем Tab
+                , <&macro_release &kp LWIN>; // 3. Отпускаем Super
+        };
+    };
   behaviors {
         td_play_pause_next_prev: tap_dance_0 {
             compatible = "zmk,behavior-tap-dance";
@@ -56,6 +69,12 @@
             key-positions = <10 11>;
             bindings = <&kp TAB>;
         };
+	combo_super_space {
+            timeout-ms = <50>;
+            key-positions = <23 24>;
+            // Вызываем созданный макрос при нажатии 23 и 24 клавиш
+            bindings = <&super_space_macro>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
@@ -63,9 +82,9 @@
                 default_layer {
                         bindings = <
 &none &mt GLOBE Q &lt 4 W     &lt 3 E    &lt 2 R     &lt 1 T                    &lt 1 Y     &lt 2 U        &lt 3 I     &lt 4 O     &mt GLOBE P      &none
-&none &kp A       &mt LCTRL S &mt LALT D &mt LCMD F  &kp G                      &kp H       &mt RCMD J     &mt RALT K  &mt RCTRL L  &kp SEMI   &none
+&none &kp A       &mt LCMD S &mt LALT D &mt LCMD F  &kp G                      &kp H       &mt RCMD J     &mt RALT K  &mt RCTRL L  &kp SEMI   &none
 &none &kp Z       &kp X       &kp C      &kp V       &kp B                      &kp N       &kp M          &kp COMMA   &kp DOT     &kp FSLH         &none
-             &kp ESC    &mt LCMD TAB     &mt LSHIFT SPACE                       &mt RSHIFT SPACE       &kp BSPC  &kp RET
+             &kp ESC    &mt LCTRL TAB     &mt LSHIFT SPACE                       &mt RSHIFT SPACE       &kp BSPC  &kp RET
                         >;
                 };
                 punctuation_layer1 {
