@@ -75,6 +75,12 @@
             // Вызываем созданный макрос при нажатии 23 и 24 клавиш
             bindings = <&super_space_macro>;
         };
+	combo_super_space {
+            timeout-ms = <50>;
+            key-positions = <25 26>;
+            // Вызываем созданный макрос при нажатии 25 и 26 клавиш
+            bindings = <&super_space_macro>;
+        };
     };
         keymap {
                 compatible = "zmk,keymap";
